@@ -1,4 +1,8 @@
 """Streamlit chat UI. Run: streamlit run src/app/streamlit_app.py"""
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
 import streamlit as st
 from src.generation.rag import answer
 

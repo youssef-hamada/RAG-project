@@ -1,0 +1,293 @@
+{
+  "summary": {
+    "n": 20,
+    "groundedness_pct": 0.0,
+    "citation_accuracy_pct": 0.0,
+    "partial_match_pct": 10.0,
+    "latency_p50_ms": 45.6,
+    "latency_p95_ms": 66.0,
+    "latency_mean_ms": 213.3
+  },
+  "results": [
+    {
+      "id": "q01",
+      "topic": "PTO",
+      "question": "How many PTO days do full-time employees accrue per year?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "pto_policy"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 3399.5
+    },
+    {
+      "id": "q02",
+      "topic": "PTO",
+      "question": "What is the PTO carryover limit?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "pto_policy"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 48.3
+    },
+    {
+      "id": "q03",
+      "topic": "PTO",
+      "question": "How many sick days do full-time employees get per year?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "pto_policy"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 66.0
+    },
+    {
+      "id": "q04",
+      "topic": "PTO",
+      "question": "Is PTO paid out on termination?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "pto_policy"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 53.3
+    },
+    {
+      "id": "q05",
+      "topic": "Remote",
+      "question": "How many days per week can eligible employees work remotely?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "remote_work"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 45.6
+    },
+    {
+      "id": "q06",
+      "topic": "Remote",
+      "question": "Can I work from outside my country of employment?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "remote_work"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 43.1
+    },
+    {
+      "id": "q07",
+      "topic": "Remote",
+      "question": "What are the core hours for remote employees?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "remote_work"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 50.4
+    },
+    {
+      "id": "q08",
+      "topic": "Remote",
+      "question": "Does the company reimburse internet costs for remote work?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "remote_work"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": true,
+      "latency_ms": 54.2
+    },
+    {
+      "id": "q09",
+      "topic": "Expense",
+      "question": "What is the daily meal reimbursement cap while traveling?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "expense_policy"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 65.5
+    },
+    {
+      "id": "q10",
+      "topic": "Expense",
+      "question": "What class of flight is required for flights under 6 hours?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "expense_policy"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 48.6
+    },
+    {
+      "id": "q11",
+      "topic": "Expense",
+      "question": "What is the hotel reimbursement cap in tier-1 cities?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "expense_policy"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 45.7
+    },
+    {
+      "id": "q12",
+      "topic": "Expense",
+      "question": "How long do I have to submit an expense report?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "expense_policy"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 40.1
+    },
+    {
+      "id": "q13",
+      "topic": "Security",
+      "question": "What is the minimum password length?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "security_policy"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 36.5
+    },
+    {
+      "id": "q14",
+      "topic": "Security",
+      "question": "How often must passwords be rotated?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "security_policy"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 35.6
+    },
+    {
+      "id": "q15",
+      "topic": "Security",
+      "question": "Within how long must a suspected security incident be reported?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "security_policy"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 42.5
+    },
+    {
+      "id": "q16",
+      "topic": "Holidays",
+      "question": "How many floating holidays do employees receive per year?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "holidays"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 38.6
+    },
+    {
+      "id": "q17",
+      "topic": "Holidays",
+      "question": "Do floating holidays carry over to the next year?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "holidays"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": true,
+      "latency_ms": 40.7
+    },
+    {
+      "id": "q18",
+      "topic": "Holidays",
+      "question": "Is the Friday after Thanksgiving a company holiday?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "holidays"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 39.4
+    },
+    {
+      "id": "q19",
+      "topic": "Conduct",
+      "question": "What is the maximum gift value employees may accept from vendors?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "code_of_conduct"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 39.0
+    },
+    {
+      "id": "q20",
+      "topic": "Conduct",
+      "question": "How long does Compliance take to review a conflict-of-interest disclosure?",
+      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
+      "cited_doc_ids": [],
+      "gold_doc_ids": [
+        "code_of_conduct"
+      ],
+      "grounded": false,
+      "citation_correct": false,
+      "partial_match": false,
+      "latency_ms": 33.6
+    }
+  ]
+}
