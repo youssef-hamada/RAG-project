@@ -17,7 +17,7 @@ MAX_ANSWER_WORDS = 150
 MIN_SIMILARITY = 0.25
 
 EMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
-LLM_MODEL = "llama-3.1-8b-instant"
+LLM_MODEL = "openai/gpt-oss-20b"
 
 SEED = 42
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
