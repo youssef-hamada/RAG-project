@@ -1,6 +1,4 @@
-"""Run the eval set. Writes eval/results.json.
-Run: python -m eval.run_eval
-"""
+"""Run the eval set. Writes eval/results.json."""
 import json, re, time, statistics
 from pathlib import Path
 from src.generation.rag import answer
@@ -10,14 +8,11 @@ EVAL_DIR = Path(__file__).parent
 QUESTIONS = EVAL_DIR / "questions.jsonl"
 OUT = EVAL_DIR / "results.json"
 
-JUDGE_SYSTEM = """You are a strict grader. Given a question, an answer, and the
-retrieved context, decide if EVERY factual claim in the answer is supported by
-the context. Reply with exactly YES or NO."""
+JUDGE_SYSTEM = """You are a strict grader. Given a question, an answer, and the retrieved context, decide if EVERY factual claim in the answer is supported by the context. Reply with exactly YES or NO."""
 
-
-def _normalize(s: str) -> str:
-    return re.sub(r"\s+", " ", s.lower()).strip()
-
+def _normalize_id(s: str) -> str:
+    # Makes "pto-policy", "pto_policy", and "PTO_POLICY" all match
+    return s.lower().replace("-", "_").strip()
 
 def _is_grounded(question: str, ans: str, sources: list) -> bool:
     if not sources:
@@ -30,31 +25,36 @@ def _is_grounded(question: str, ans: str, sources: list) -> bool:
             temperature=0.0,
         ).strip().upper()
         return verdict.startswith("YES")
-    except Exception:
-        # fall back to keyword overlap
-        ans_words = set(_normalize(ans).split())
-        ctx_words = set(_normalize(ctx).split())
+    except Exception as e:
+        print(f"  [Judge Error] {e}")
+        # fallback
+        ans_words = set(re.findall(r'\w+', ans.lower()))
+        ctx_words = set(re.findall(r'\w+', ctx.lower()))
         if not ans_words:
             return False
         overlap = len(ans_words & ctx_words) / len(ans_words)
         return overlap >= 0.5
 
-
 def _citation_correct(ans: str, gold_ids: list, sources: list) -> bool:
-    # every cited [doc_id] must be in gold_ids AND must be an actual retrieved source
-    cited = set(re.findall(r"\[([a-z0-9_\-]+)\]", ans.lower()))
+    # Extract citations like [pto-policy] or [pto_policy]
+    cited = set(re.findall(r"\[([a-zA-Z0-9_\-]+)\]", ans))
+    cited = {_normalize_id(c) for c in cited}
+    gold = {_normalize_id(g) for g in gold_ids}
+    
     if not cited:
         return False
-    return cited.issubset(set(gold_ids))
-
+    # Every citation must be in the gold list
+    return cited.issubset(gold)
 
 def _partial_match(ans: str, gold: str) -> bool:
-    return _normalize(gold) in _normalize(ans)
-
+    return _normalize_id(gold) in _normalize_id(ans)
 
 def main():
     rows = [json.loads(l) for l in QUESTIONS.read_text().splitlines() if l.strip()]
     results, latencies = [], []
+    
+    print(f"Running {len(rows)} questions...\n")
+    
     for row in rows:
         t0 = time.perf_counter()
         try:
@@ -73,19 +73,19 @@ def main():
             "id": row["id"], "topic": row["topic"],
             "question": row["question"],
             "answer": r["answer"],
-            "cited_doc_ids": sorted(set(re.findall(r"\[([a-z0-9_\-]+)\]", r["answer"].lower()))),
+            "cited_doc_ids": sorted(set(re.findall(r"\[([a-zA-Z0-9_\-]+)\]", r["answer"]))),
             "gold_doc_ids": row["gold_doc_ids"],
             "grounded": grounded,
             "citation_correct": cited_ok,
             "partial_match": partial,
             "latency_ms": round(latency_ms, 1),
         })
-        print(f'{row["id"]:>4}  grounded={grounded!s:5} cite={cited_ok!s:5} '
-              f'partial={partial!s:5}  {latency_ms:7.0f} ms')
+        print(f'{row["id"]:>4}  grounded={grounded!s:5} cite={cited_ok!s:5} partial={partial!s:5}  {latency_ms:7.0f} ms')
 
     n = len(results)
     latencies.sort()
     def pct(p): return latencies[int(round((p/100)*(n-1)))]
+    
     summary = {
         "n": n,
         "groundedness_pct": round(100 * sum(r["grounded"] for r in results) / n, 1),
@@ -95,11 +95,11 @@ def main():
         "latency_p95_ms": round(pct(95), 1),
         "latency_mean_ms": round(statistics.mean(latencies), 1),
     }
+    
     OUT.write_text(json.dumps({"summary": summary, "results": results}, indent=2))
     print("\n=== SUMMARY ===")
     print(json.dumps(summary, indent=2))
     print(f"\nWrote {OUT}")
-
 
 if __name__ == "__main__":
     main()

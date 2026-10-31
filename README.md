@@ -31,3 +31,38 @@ indexed documents and includes citations to the specific source documents.
 - Reproducible evaluation: groundedness, citation accuracy, latency p50/p95
 
 ## Repository layout
+
+├── data/raw/ # corpus (PDFs / MD / TXT)
+├── src/
+│ ├── config.py # constants, paths, seeds
+│ ├── ingestion/ # loaders, chunker, embedder + Chroma indexer
+│ ├── retrieval/ # top-k retriever
+│ ├── generation/ # prompt, LLM client, RAG orchestrator, guardrails
+│ └── app/ # Streamlit UI + FastAPI
+├── scripts/build_index.py # one-shot index build
+├── eval/ # questions.jsonl + run_eval.py + results.json
+├── tests/ # pytest
+└── .github/workflows/ci.yml
+
+Supporting docs:
+
+- [`design-and-evaluation.md`](./design-and-evaluation.md) — architecture, design decisions, evaluation results
+- [`ai-tooling.md`](./ai-tooling.md) — AI tools used and how
+
+---
+
+## Requirements
+
+- Python **3.11** or **3.12**
+- A free **Groq API key** — https://console.groq.com/keys
+
+---
+
+## Setup
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/youssef-hamada/RAG-project.git
+cd RAG-project
+```

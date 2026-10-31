@@ -3,7 +3,11 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
-load_dotenv()
+# Get the absolute path to the project root
+ROOT = Path(__file__).resolve().parent.parent
+
+# Force dotenv to load exactly this file
+load_dotenv(ROOT / ".env")
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data" / "raw"

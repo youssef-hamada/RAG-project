@@ -1,293 +1,333 @@
 {
   "summary": {
     "n": 20,
-    "groundedness_pct": 0.0,
-    "citation_accuracy_pct": 0.0,
-    "partial_match_pct": 10.0,
-    "latency_p50_ms": 72.5,
-    "latency_p95_ms": 173.7,
-    "latency_mean_ms": 548.9
+    "groundedness_pct": 100.0,
+    "citation_accuracy_pct": 100.0,
+    "partial_match_pct": 70.0,
+    "latency_p50_ms": 4874.7,
+    "latency_p95_ms": 6648.0,
+    "latency_mean_ms": 4198.5
   },
   "results": [
     {
       "id": "q01",
       "topic": "PTO",
       "question": "How many PTO days do full-time employees accrue per year?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
-      "gold_doc_ids": [
-        "pto_policy"
+      "answer": "Full\u2011time employees accrue 15 PTO days per year. [pto-policy]",
+      "cited_doc_ids": [
+        "pto-policy"
       ],
-      "grounded": false,
-      "citation_correct": false,
+      "gold_doc_ids": [
+        "pto-policy"
+      ],
+      "grounded": true,
+      "citation_correct": true,
       "partial_match": false,
-      "latency_ms": 9306.6
+      "latency_ms": 4296.0
     },
     {
       "id": "q02",
       "topic": "PTO",
       "question": "What is the PTO carryover limit?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
-      "gold_doc_ids": [
-        "pto_policy"
+      "answer": "The PTO carryover limit is **5 unused days** per employee into the next calendar year. Any balance above 5 days is forfeited on December\u202f31. [pto-policy]",
+      "cited_doc_ids": [
+        "pto-policy"
       ],
-      "grounded": false,
-      "citation_correct": false,
-      "partial_match": false,
-      "latency_ms": 72.8
+      "gold_doc_ids": [
+        "pto-policy"
+      ],
+      "grounded": true,
+      "citation_correct": true,
+      "partial_match": true,
+      "latency_ms": 1503.5
     },
     {
       "id": "q03",
       "topic": "PTO",
       "question": "How many sick days do full-time employees get per year?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
-      "gold_doc_ids": [
-        "pto_policy"
+      "answer": "Full\u2011time employees receive **7 sick days per year**. [pto-policy]",
+      "cited_doc_ids": [
+        "pto-policy"
       ],
-      "grounded": false,
-      "citation_correct": false,
-      "partial_match": false,
-      "latency_ms": 71.5
+      "gold_doc_ids": [
+        "pto-policy"
+      ],
+      "grounded": true,
+      "citation_correct": true,
+      "partial_match": true,
+      "latency_ms": 876.8
     },
     {
       "id": "q04",
       "topic": "PTO",
       "question": "Is PTO paid out on termination?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
-      "gold_doc_ids": [
-        "pto_policy"
+      "answer": "No. PTO is not paid out on termination, except where required by state law. [pto-policy]",
+      "cited_doc_ids": [
+        "pto-policy"
       ],
-      "grounded": false,
-      "citation_correct": false,
+      "gold_doc_ids": [
+        "pto-policy"
+      ],
+      "grounded": true,
+      "citation_correct": true,
       "partial_match": false,
-      "latency_ms": 61.7
+      "latency_ms": 801.1
     },
     {
       "id": "q05",
       "topic": "Remote",
       "question": "How many days per week can eligible employees work remotely?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
+      "answer": "Eligible employees may work remotely up to 3 days per week. [remote_work]",
+      "cited_doc_ids": [
+        "remote_work"
+      ],
       "gold_doc_ids": [
         "remote_work"
       ],
-      "grounded": false,
-      "citation_correct": false,
-      "partial_match": false,
-      "latency_ms": 56.5
+      "grounded": true,
+      "citation_correct": true,
+      "partial_match": true,
+      "latency_ms": 1444.2
     },
     {
       "id": "q06",
       "topic": "Remote",
       "question": "Can I work from outside my country of employment?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
+      "answer": "No. Working from outside the country of employment is prohibited unless you first obtain prior written approval from HR and Legal. If approved, you may work internationally for up to 30 calendar days per year. [remote_work]",
+      "cited_doc_ids": [
+        "remote_work"
+      ],
       "gold_doc_ids": [
         "remote_work"
       ],
-      "grounded": false,
-      "citation_correct": false,
+      "grounded": true,
+      "citation_correct": true,
       "partial_match": false,
-      "latency_ms": 62.3
+      "latency_ms": 895.6
     },
     {
       "id": "q07",
       "topic": "Remote",
       "question": "What are the core hours for remote employees?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
+      "answer": "Core hours for all employees, including remote workers, are **10:00\u202f\u2013\u202f15:00 local company time**. This applies regardless of location. [remote_work]",
+      "cited_doc_ids": [
+        "remote_work"
+      ],
       "gold_doc_ids": [
         "remote_work"
       ],
-      "grounded": false,
-      "citation_correct": false,
+      "grounded": true,
+      "citation_correct": true,
       "partial_match": false,
-      "latency_ms": 60.7
+      "latency_ms": 1607.6
     },
     {
       "id": "q08",
       "topic": "Remote",
       "question": "Does the company reimburse internet costs for remote work?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
+      "answer": "No, the company does not reimburse internet costs for remote work. The Remote Work Policy states that \u201cInternet costs are not reimbursed.\u201d [remote_work]",
+      "cited_doc_ids": [
+        "remote_work"
+      ],
       "gold_doc_ids": [
         "remote_work"
       ],
-      "grounded": false,
-      "citation_correct": false,
+      "grounded": true,
+      "citation_correct": true,
       "partial_match": true,
-      "latency_ms": 55.8
+      "latency_ms": 6595.5
     },
     {
       "id": "q09",
       "topic": "Expense",
       "question": "What is the daily meal reimbursement cap while traveling?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
+      "answer": "The daily meal reimbursement cap while traveling is **$75 per day**. [expense_policy]",
+      "cited_doc_ids": [
+        "expense_policy"
+      ],
       "gold_doc_ids": [
         "expense_policy"
       ],
-      "grounded": false,
-      "citation_correct": false,
-      "partial_match": false,
-      "latency_ms": 72.5
+      "grounded": true,
+      "citation_correct": true,
+      "partial_match": true,
+      "latency_ms": 6495.5
     },
     {
       "id": "q10",
       "topic": "Expense",
       "question": "What class of flight is required for flights under 6 hours?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
+      "answer": "Economy class is required for flights under 6 hours. [expense_policy]",
+      "cited_doc_ids": [
+        "expense_policy"
+      ],
       "gold_doc_ids": [
         "expense_policy"
       ],
-      "grounded": false,
-      "citation_correct": false,
-      "partial_match": false,
-      "latency_ms": 165.6
+      "grounded": true,
+      "citation_correct": true,
+      "partial_match": true,
+      "latency_ms": 6648.0
     },
     {
       "id": "q11",
       "topic": "Expense",
       "question": "What is the hotel reimbursement cap in tier-1 cities?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
+      "answer": "The hotel reimbursement cap in tier\u20111 cities is **$250 per night**. [expense_policy]",
+      "cited_doc_ids": [
+        "expense_policy"
+      ],
       "gold_doc_ids": [
         "expense_policy"
       ],
-      "grounded": false,
-      "citation_correct": false,
-      "partial_match": false,
-      "latency_ms": 53.5
+      "grounded": true,
+      "citation_correct": true,
+      "partial_match": true,
+      "latency_ms": 5477.4
     },
     {
       "id": "q12",
       "topic": "Expense",
       "question": "How long do I have to submit an expense report?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
+      "answer": "You must submit an expense report within **30 days** of the expense date. Reports submitted after 60 days may be denied. [expense_policy]",
+      "cited_doc_ids": [
+        "expense_policy"
+      ],
       "gold_doc_ids": [
         "expense_policy"
       ],
-      "grounded": false,
-      "citation_correct": false,
+      "grounded": true,
+      "citation_correct": true,
       "partial_match": false,
-      "latency_ms": 67.7
+      "latency_ms": 6212.5
     },
     {
       "id": "q13",
       "topic": "Security",
       "question": "What is the minimum password length?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
+      "answer": "The minimum password length is **14 characters**. [security_policy]",
+      "cited_doc_ids": [
+        "security_policy"
+      ],
       "gold_doc_ids": [
         "security_policy"
       ],
-      "grounded": false,
-      "citation_correct": false,
-      "partial_match": false,
-      "latency_ms": 173.7
+      "grounded": true,
+      "citation_correct": true,
+      "partial_match": true,
+      "latency_ms": 6704.6
     },
     {
       "id": "q14",
       "topic": "Security",
       "question": "How often must passwords be rotated?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
+      "answer": "Passwords must be rotated every 180 days. [security_policy]",
+      "cited_doc_ids": [
+        "security_policy"
+      ],
       "gold_doc_ids": [
         "security_policy"
       ],
-      "grounded": false,
-      "citation_correct": false,
-      "partial_match": false,
-      "latency_ms": 46.4
+      "grounded": true,
+      "citation_correct": true,
+      "partial_match": true,
+      "latency_ms": 5531.4
     },
     {
       "id": "q15",
       "topic": "Security",
       "question": "Within how long must a suspected security incident be reported?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
+      "answer": "A suspected security incident must be reported within **1 hour of discovery**. [security_policy]",
+      "cited_doc_ids": [
+        "security_policy"
+      ],
       "gold_doc_ids": [
         "security_policy"
       ],
-      "grounded": false,
-      "citation_correct": false,
+      "grounded": true,
+      "citation_correct": true,
       "partial_match": false,
-      "latency_ms": 75.5
+      "latency_ms": 4874.7
     },
     {
       "id": "q16",
       "topic": "Holidays",
       "question": "How many floating holidays do employees receive per year?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
+      "answer": "Employees receive 2 floating holidays per year. [holidays]",
+      "cited_doc_ids": [
+        "holidays"
+      ],
       "gold_doc_ids": [
         "holidays"
       ],
-      "grounded": false,
-      "citation_correct": false,
-      "partial_match": false,
-      "latency_ms": 81.2
+      "grounded": true,
+      "citation_correct": true,
+      "partial_match": true,
+      "latency_ms": 4484.8
     },
     {
       "id": "q17",
       "topic": "Holidays",
       "question": "Do floating holidays carry over to the next year?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
+      "answer": "No, floating holidays do not carry over to the next year. They must be used within the year they are granted. [holidays]",
+      "cited_doc_ids": [
+        "holidays"
+      ],
       "gold_doc_ids": [
         "holidays"
       ],
-      "grounded": false,
-      "citation_correct": false,
+      "grounded": true,
+      "citation_correct": true,
       "partial_match": true,
-      "latency_ms": 112.9
+      "latency_ms": 3670.8
     },
     {
       "id": "q18",
       "topic": "Holidays",
       "question": "Is the Friday after Thanksgiving a company holiday?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
+      "answer": "Yes. The Friday following Thanksgiving is listed as an observed holiday in the company\u2019s holiday schedule. [holidays]",
+      "cited_doc_ids": [
+        "holidays"
+      ],
       "gold_doc_ids": [
         "holidays"
       ],
-      "grounded": false,
-      "citation_correct": false,
-      "partial_match": false,
-      "latency_ms": 157.5
+      "grounded": true,
+      "citation_correct": true,
+      "partial_match": true,
+      "latency_ms": 5744.7
     },
     {
       "id": "q19",
       "topic": "Conduct",
       "question": "What is the maximum gift value employees may accept from vendors?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
+      "answer": "Employees may accept gifts valued at **$50 or less** from vendors or partners. [code_of_conduct]",
+      "cited_doc_ids": [
+        "code_of_conduct"
+      ],
       "gold_doc_ids": [
         "code_of_conduct"
       ],
-      "grounded": false,
-      "citation_correct": false,
-      "partial_match": false,
-      "latency_ms": 160.5
+      "grounded": true,
+      "citation_correct": true,
+      "partial_match": true,
+      "latency_ms": 5554.1
     },
     {
       "id": "q20",
       "topic": "Conduct",
       "question": "How long does Compliance take to review a conflict-of-interest disclosure?",
-      "answer": "ERROR: GROQ_API_KEY is not set. See .env.example.",
-      "cited_doc_ids": [],
+      "answer": "Compliance reviews conflict\u2011of\u2011interest disclosures within 10 business days. [code_of_conduct]",
+      "cited_doc_ids": [
+        "code_of_conduct"
+      ],
       "gold_doc_ids": [
         "code_of_conduct"
       ],
-      "grounded": false,
-      "citation_correct": false,
-      "partial_match": false,
-      "latency_ms": 63.5
+      "grounded": true,
+      "citation_correct": true,
+      "partial_match": true,
+      "latency_ms": 4551.6
     }
   ]
 }

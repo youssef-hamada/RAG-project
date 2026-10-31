@@ -1,7 +1,7 @@
-{"id":"q01","topic":"PTO","question":"How many PTO days do full-time employees accrue per year?","gold_answer":"15 days per year","gold_doc_ids":["pto_policy"]}
-{"id":"q02","topic":"PTO","question":"What is the PTO carryover limit?","gold_answer":"5 days","gold_doc_ids":["pto_policy"]}
-{"id":"q03","topic":"PTO","question":"How many sick days do full-time employees get per year?","gold_answer":"7","gold_doc_ids":["pto_policy"]}
-{"id":"q04","topic":"PTO","question":"Is PTO paid out on termination?","gold_answer":"No, except where required by state law","gold_doc_ids":["pto_policy"]}
+{"id":"q01","topic":"PTO","question":"How many PTO days do full-time employees accrue per year?","gold_answer":"15 days per year","gold_doc_ids":["pto-policy"]}
+{"id":"q02","topic":"PTO","question":"What is the PTO carryover limit?","gold_answer":"5 days","gold_doc_ids":["pto-policy"]}
+{"id":"q03","topic":"PTO","question":"How many sick days do full-time employees get per year?","gold_answer":"7","gold_doc_ids":["pto-policy"]}
+{"id":"q04","topic":"PTO","question":"Is PTO paid out on termination?","gold_answer":"No, except where required by state law","gold_doc_ids":["pto-policy"]}
 {"id":"q05","topic":"Remote","question":"How many days per week can eligible employees work remotely?","gold_answer":"Up to 3 days per week","gold_doc_ids":["remote_work"]}
 {"id":"q06","topic":"Remote","question":"Can I work from outside my country of employment?","gold_answer":"Not without prior written approval from HR and Legal, up to 30 days per year","gold_doc_ids":["remote_work"]}
 {"id":"q07","topic":"Remote","question":"What are the core hours for remote employees?","gold_answer":"10:00 to 15:00 local company time","gold_doc_ids":["remote_work"]}
